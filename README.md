@@ -23,9 +23,13 @@ When you've done that, you need to install Flask, the framework we are going to 
 sudo apt-get install python3-flask
 ```
 
-Finally, just clone the repository, cd into it and run with Python3:
+# Usage
+
+To run the application, just clone the repository, cd into it and run with Python3:
 
 ```
 cd RaspberrySenseWeatherStation/
 python3 app.py
 ```
+
+Note that temperature and humidity readings can be offset by a few degrees and/or percents. This is because the CPU temperature influences the temperature sensor on the Sense HAT, especially on the RaspberryPi 3. By default it is corrected by substracting the reading by a certain value based on the CPU temperature. You can change this value in weatherstation.py based on your specific setup and workload.
